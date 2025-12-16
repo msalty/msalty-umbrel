@@ -6,10 +6,10 @@ services:
       - yarn
       - start
     deploy:
-      user: 1000:1000
       resources:
         limits:
           memory: 8052M
+    user: 1000:1000
     environment:
       - HOSTNAME=0.0.0.0
       - HTTPS=false
