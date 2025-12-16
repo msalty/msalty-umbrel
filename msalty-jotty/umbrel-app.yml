@@ -8,6 +8,16 @@ version: "1.13.1"
 port: 1122
 description: >-
   A simple, self-hosted app for your checklists and notes. Tired of bloated, cloud-based to-do apps? Jotty is your lightweight, private alternative.
+
+  Features
+  - Add improved markdown editor with full on syntax highlighting and tab support
+  - Add optional line number next to markdown editor
+  - Add preview button on top of rich editor to avoid re-formatting text by mistake, if you still want to preview your document
+  - Add "minimal" mode which fully disables Rich Text Editor, ALL syntax will still work, even advanced one, however you will lose the ability to do it via the toolbar/slash commands/quick actions, as the editor will effectively become a minimal syntax highlighted editor
+
+  Bugfixes
+  - When having the "markdown" mode set by default, the initial load saves raw html to the file rather than markdown #145
+  - Editing markdown without using rich editor doesn't re-format markdown anymore, markdown is only formatted if using the rich editor now #145
 developer: fccview
 website: https://jotty.page
 submitter: msalty
@@ -19,15 +29,7 @@ gallery:
   - https://jotty.page/assets/images/light/notes-home-light.png
   - https://jotty.page/assets/images/light/checklists-home-light.png
 releaseNotes: >-
-  features
-  - Add improved markdown editor with full on syntax highlighting and tab support
-  - Add optional line number next to markdown editor
-  - Add preview button on top of rich editor to avoid re-formatting text by mistake, if you still want to preview your document
-  - Add "minimal" mode which fully disables Rich Text Editor, ALL syntax will still work, even advanced one, however you will lose the ability to do it via the toolbar/slash commands/quick actions, as the editor will effectively become a minimal syntax highlighted editor
-
-  bugfixes
-  - When having the "markdown" mode set by default, the initial load saves raw html to the file rather than markdown #145
-  - Editing markdown without using rich editor doesn't re-format markdown anymore, markdown is only formatted if using the rich editor now #145
+  Initial release.
 dependencies: []
 path: ""
 defaultUsername: ""
