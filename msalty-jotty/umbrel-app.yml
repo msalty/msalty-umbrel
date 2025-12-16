@@ -9,16 +9,21 @@ port: 1122
 description: >-
   A simple, self-hosted app for your checklists and notes. Tired of bloated, cloud-based to-do apps? Jotty is your lightweight, private alternative.
 
-  Features:
-  
-  - Add improved markdown editor with full on syntax highlighting and tab support
-  
-  - Add optional line number next to markdown editor
-  
-  - Add preview button on top of rich editor to avoid re-formatting text by mistake, if you still want to preview your document
-  
-  - Add "minimal" mode which fully disables Rich Text Editor, ALL syntax will still work, even advanced one, however you will lose the ability to do it via the toolbar/slash commands/quick actions, as the editor will effectively become a minimal syntax highlighted editor
-  
+
+  Jotty is a modern open source application that focuses on simplicity, clarity, and control when managing notes and checklists. It is designed for people who prefer an organized yet minimal approach to writing and planning. The goal of Jotty is to make the process of capturing ideas, structuring thoughts, and tracking tasks as seamless as possible. Its clean interface encourages focus while maintaining enough flexibility for both personal and professional use.
+
+
+  At its core, Jotty allows users to create and manage notes with a powerful rich text editor that supports formatting, hyperlinks, inline code, and syntax highlighting. This makes it suitable for anything from quick thoughts to technical documentation. Users can also create checklists and to-do lists that can be sorted and rearranged with ease, offering a clear overview of progress and priorities.
+
+
+  The app emphasizes structure without imposing restrictions. Notes and lists can be organized into categories, tagged for quick reference, and searched efficiently using a fast built-in search feature. The experience is intuitive and responsive, offering instant feedback and smooth navigation between notes and lists.
+
+
+  Beyond individual productivity, Jotty enables collaboration by allowing users to share notes or lists through links or restricted access. This makes it practical for teams, couples, or anyone who wants to coordinate projects or daily routines in a lightweight and elegant environment.
+
+
+  Jotty aims to bridge the gap between a rich writing tool and a structured task manager. It delivers a calm, minimal space for thinking, planning, and documenting without distractions, offering both creative freedom and precise organization in one unified workspace.
+
 developer: fccview
 website: https://jotty.page
 submitter: msalty
@@ -30,6 +35,17 @@ gallery:
   - https://jotty.page/assets/images/light/notes-home-light.png
   - https://jotty.page/assets/images/light/checklists-home-light.png
 releaseNotes: >-
+  Features:
+  
+  - Add improved markdown editor with full on syntax highlighting and tab support
+  
+  - Add optional line number next to markdown editor
+  
+  - Add preview button on top of rich editor to avoid re-formatting text by mistake, if you still want to preview your document
+  
+  - Add "minimal" mode which fully disables Rich Text Editor, ALL syntax will still work, even advanced one, however you will lose the ability to do it via the toolbar/slash commands/quick actions, as the editor will effectively become a minimal syntax highlighted editor
+
+  
   Bug Fixes:
 
   - When having the "markdown" mode set by default, the initial load saves raw html to the file rather than markdown #145
