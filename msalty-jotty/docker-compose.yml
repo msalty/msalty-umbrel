@@ -2,12 +2,13 @@ name: jotty
 services:
   jotty:
     cpu_shares: 10
-    command: ["/bin/sh", "-c", "chown -R 1000:1000 /app/data /app/cache /app/config && yarn start"]
+    command:
+      - yarn
+      - start
     deploy:
       resources:
         limits:
           memory: 8052M
-    user: 1000:1000
     environment:
       - HOSTNAME=0.0.0.0
       - HTTPS=false
@@ -20,8 +21,6 @@ services:
       - SERVE_PUBLIC_FILES=yes
       - SERVE_PUBLIC_IMAGES=yes
       - YARN_VERSION=1.22.22
-      - PUID=1000
-      - PGID=1000
     image: ghcr.io/fccview/jotty:latest
     labels:
       icon: https://github.com/fccview/jotty/blob/main/public/app-icons/android-chrome-192x192.png?raw=true
