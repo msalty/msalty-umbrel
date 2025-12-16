@@ -33,7 +33,3 @@ services:
       - ${APP_DATA_DIR}/app/cache:/app/cache
       - ${APP_DATA_DIR}/app/data:/app/data
       - ${APP_DATA_DIR}/app/config:/app/config
-
-networks:
-  jotty_default:
-    driver: bridge
