@@ -2,7 +2,7 @@ manifestVersion: 1
 id: msalty-jotty
 name: Jotty
 tagline: A simple, self-hosted app for your checklists and notes.
-icon: https://github.com/fccview/jotty/blob/main/public/app-icons/logos/logo.png
+icon: https://raw.githubusercontent.com/fccview/jotty/4c803902e7d04d04bc584cb01c396e2670c81dc5/public/app-icons/logos/logo-variation.svg
 category: Productivity
 version: "1.13.1"
 port: 1122
