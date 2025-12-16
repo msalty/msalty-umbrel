@@ -6,6 +6,7 @@ services:
       - yarn
       - start
     deploy:
+      user: 1000:1000
       resources:
         limits:
           memory: 8052M
