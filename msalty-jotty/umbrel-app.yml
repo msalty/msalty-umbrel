@@ -9,7 +9,8 @@ port: 1122
 description: >-
   A simple, self-hosted app for your checklists and notes. Tired of bloated, cloud-based to-do apps? Jotty is your lightweight, private alternative.
 
-  Features
+  Features:
+  
   - Add improved markdown editor with full on syntax highlighting and tab support
   
   - Add optional line number next to markdown editor
@@ -29,7 +30,7 @@ gallery:
   - https://jotty.page/assets/images/light/notes-home-light.png
   - https://jotty.page/assets/images/light/checklists-home-light.png
 releaseNotes: >-
-  Initial release.
+  Bug Fixes:
 
   - When having the "markdown" mode set by default, the initial load saves raw html to the file rather than markdown #145
   
