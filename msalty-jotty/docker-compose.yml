@@ -1,35 +1,26 @@
-name: jotty
 services:
   jotty:
-    cpu_shares: 10
-    command:
-      - yarn
-      - start
-    deploy:
-      resources:
-        limits:
-          memory: 8052M
-    environment:
-      - HOSTNAME=0.0.0.0
-      - HTTPS=false
-      - NEXT_TELEMETRY_DISABLED=1
-      - NODE_ENV=production
-      - NODE_VERSION=20.19.5
-      - OPENAI_API_KEY=sk-xxxxxx
-      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-      - PORT=3000
-      - SERVE_PUBLIC_FILES=yes
-      - SERVE_PUBLIC_IMAGES=yes
-      - YARN_VERSION=1.22.22
     image: ghcr.io/fccview/jotty:latest
-    labels:
-      icon: https://github.com/fccview/jotty/blob/main/public/app-icons/android-chrome-192x192.png?raw=true
+    container_name: jotty
+    user: "1000:1000"
     ports:
-      - target: "3000"
-        published: "1122"
-        protocol: tcp
+      - "1122:3000"
     restart: unless-stopped
+    #platform: linux/arm64
+    environment:
+      - NODE_ENV=production
+      #- HTTPS=true
+      #- SERVE_PUBLIC_IMAGES=yes
+      #- SERVE_PUBLIC_FILES=yes
+      #- SSO_MODE=oidc
+      #- OIDC_ISSUER=<YOUR_SSO_ISSUER>
+      #- OIDC_CLIENT_ID=<YOUR_SSO_CLIENT_ID>
+      #- APP_URL=https://your-jotty-domain.com
+      #- OIDC_CLIENT_SECRET=your_client_secret
+      #- SSO_FALLBACK_LOCAL=yes
+      #- OIDC_ADMIN_GROUPS=admins # use this if your IDP sends a group claim
+      #- OIDC_ADMIN_ROLES=admins # use this if your IDP sends a role claim
     volumes:
-      - ${APP_DATA_DIR}/app/cache:/app/cache
-      - ${APP_DATA_DIR}/app/data:/app/data
-      - ${APP_DATA_DIR}/app/config:/app/config
+      - ${APP_DATA_DIR}/app/cache:/app/cache:rw
+      - ${APP_DATA_DIR}/app/data:/app/data:rw
+      - ${APP_DATA_DIR}/app/config:/app/config:rw
