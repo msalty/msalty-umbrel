@@ -1,26 +1,20 @@
+version: "3.7"
+
 services:
-  jotty:
-    image: ghcr.io/fccview/jotty:latest
-    container_name: jotty
-    user: "1000:1000"
-    ports:
-      - "1122:3000"
-    restart: unless-stopped
-    #platform: linux/arm64
+  app_proxy:
     environment:
-      - NODE_ENV=production
-      #- HTTPS=true
-      #- SERVE_PUBLIC_IMAGES=yes
-      #- SERVE_PUBLIC_FILES=yes
-      #- SSO_MODE=oidc
-      #- OIDC_ISSUER=<YOUR_SSO_ISSUER>
-      #- OIDC_CLIENT_ID=<YOUR_SSO_CLIENT_ID>
-      #- APP_URL=https://your-jotty-domain.com
-      #- OIDC_CLIENT_SECRET=your_client_secret
-      #- SSO_FALLBACK_LOCAL=yes
-      #- OIDC_ADMIN_GROUPS=admins # use this if your IDP sends a group claim
-      #- OIDC_ADMIN_ROLES=admins # use this if your IDP sends a role claim
+      APP_HOST: denny-jotty_web_1
+      APP_PORT: 3000
+
+  web:
+    image: ghcr.io/fccview/jotty:latest
+    restart: on-failure
+    user: "0:0"
     volumes:
-      - ${APP_DATA_DIR}/app/cache:/app/cache:rw
-      - ${APP_DATA_DIR}/app/data:/app/data:rw
-      - ${APP_DATA_DIR}/app/config:/app/config:rw
+      - ${APP_DATA_DIR}/data/app_data:/app/data:rw
+      - ${APP_DATA_DIR}/data/config:/app/config:ro
+      - ${APP_DATA_DIR}/data/cache:/app/.next/cache:rw
+    environment:
+      NODE_ENV: production
+      SERVE_PUBLIC_IMAGES: yes
+      SERVE_PUBLIC_FILES: yes
