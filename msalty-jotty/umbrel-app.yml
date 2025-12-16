@@ -37,20 +37,20 @@ gallery:
 releaseNotes: >-
   Features:
   
-  - Add improved markdown editor with full on syntax highlighting and tab support
+  • Add improved markdown editor with full on syntax highlighting and tab support
   
-  - Add optional line number next to markdown editor
+  • Add optional line number next to markdown editor
   
-  - Add preview button on top of rich editor to avoid re-formatting text by mistake, if you still want to preview your document
+  • Add preview button on top of rich editor to avoid re-formatting text by mistake, if you still want to preview your document
   
-  - Add "minimal" mode which fully disables Rich Text Editor, ALL syntax will still work, even advanced one, however you will lose the ability to do it via the toolbar/slash commands/quick actions, as the editor will effectively become a minimal syntax highlighted editor
+  • Add "minimal" mode which fully disables Rich Text Editor, ALL syntax will still work, even advanced one, however you will lose the ability to do it via the toolbar/slash commands/quick actions, as the editor will effectively become a minimal syntax highlighted editor
 
   
   Bug Fixes:
 
-  - When having the "markdown" mode set by default, the initial load saves raw html to the file rather than markdown #145
+  • When having the "markdown" mode set by default, the initial load saves raw html to the file rather than markdown #145
   
-  - Editing markdown without using rich editor doesn't re-format markdown anymore, markdown is only formatted if using the rich editor now #145
+  • Editing markdown without using rich editor doesn't re-format markdown anymore, markdown is only formatted if using the rich editor now #145
   
 dependencies: []
 path: ""
