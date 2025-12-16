@@ -4,7 +4,7 @@ services:
     container_name: drawio
     image: jgraph/drawio
     ports:
-      - 8121:8080
+      - 1123:8080
     volumes:
       - ${APP_DATA_DIR}/data:/opt/drawio/data
     restart: unless-stopped
