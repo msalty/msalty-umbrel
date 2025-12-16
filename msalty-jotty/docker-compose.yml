@@ -1,5 +1,4 @@
 version: "3.7"
-
 services:
   app_proxy:
     environment:
@@ -8,6 +7,7 @@ services:
 
   web:
     image: ghcr.io/fccview/jotty:latest
+    user: "1000:1000"
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/app_data:/app/data:rw
@@ -16,8 +16,8 @@ services:
     environment:
       - NODE_ENV=production
       #- HTTPS=true
-      - SERVE_PUBLIC_IMAGES=yes
-      - SERVE_PUBLIC_FILES=yes
+      #- SERVE_PUBLIC_IMAGES=yes
+      #- SERVE_PUBLIC_FILES=yes
       #- SSO_MODE=oidc
       #- OIDC_ISSUER=<YOUR_SSO_ISSUER>
       #- OIDC_CLIENT_ID=<YOUR_SSO_CLIENT_ID>
