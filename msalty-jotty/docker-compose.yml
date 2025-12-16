@@ -21,6 +21,8 @@ services:
       - SERVE_PUBLIC_FILES=yes
       - SERVE_PUBLIC_IMAGES=yes
       - YARN_VERSION=1.22.22
+      - PUID=1000
+      - PGID=1000
     image: ghcr.io/fccview/jotty:latest
     labels:
       icon: https://github.com/fccview/jotty/blob/main/public/app-icons/android-chrome-192x192.png?raw=true
