@@ -9,7 +9,6 @@ services:
   web:
     image: ghcr.io/fccview/jotty:latest
     restart: on-failure
-    user: "0:0"
     volumes:
       - ${APP_DATA_DIR}/data/app_data:/app/data:rw
       - ${APP_DATA_DIR}/data/config:/app/config:ro
