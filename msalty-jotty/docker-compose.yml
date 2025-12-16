@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: denny-jotty_web_1
+      APP_HOST: msalty-jotty_web_1
       APP_PORT: 3000
 
   web:
