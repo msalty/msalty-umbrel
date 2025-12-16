@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   web:
-    image: ghcr.io/fccview/jotty:latest
+    image: ghcr.io/fccview/jotty:1.9.2@sha256:798ada0394bbed1258ad623ea4cc88eba51c9bc634d637a3343b2e074b608446
     restart: on-failure
     user: "0:0"
     volumes:
