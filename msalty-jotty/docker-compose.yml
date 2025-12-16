@@ -29,19 +29,10 @@ services:
         published: "1122"
         protocol: tcp
     restart: unless-stopped
-    user: 1001:1001
     volumes:
-      - jotty_cache:/app/cache
-      - jotty_data:/app/data
-      - jotty_config:/app/config
-
-volumes:
-  jotty_cache:
-    external: true
-  jotty_data:
-    external: true
-  jotty_config:
-    external: true
+      - ${APP_DATA_DIR}/app/cache:/app/cache
+      - ${APP_DATA_DIR}/app/data:/app/data
+      - ${APP_DATA_DIR}/app/config:/app/config
 
 networks:
   jotty_default:
