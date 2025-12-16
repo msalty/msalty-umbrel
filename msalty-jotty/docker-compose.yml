@@ -2,9 +2,7 @@ name: jotty
 services:
   jotty:
     cpu_shares: 10
-    command:
-      - yarn
-      - start
+    command: ["/bin/sh", "-c", "chown -R 1000:1000 /app/data /app/cache /app/config && yarn start"]
     deploy:
       resources:
         limits:
