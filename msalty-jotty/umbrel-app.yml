@@ -4,7 +4,7 @@ name: Jotty
 tagline: A simple, self-hosted app for your checklists and notes.
 icon: https://raw.githubusercontent.com/fccview/jotty/4c803902e7d04d04bc584cb01c396e2670c81dc5/public/app-icons/logos/logo-variation.svg
 category: files
-version: "1.13.1"
+version: "1.16.1"
 port: 1122
 description: >-
   Tired of bloated, cloud-based to-do apps? Jotty is a lightweight alternative for managing your personal checklists and notes.
