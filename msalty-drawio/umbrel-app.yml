@@ -4,7 +4,7 @@ name: draw.io
 tagline: Online diagramming application
 icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/2048px-Diagrams.net_Logo.svg.png
 category: Productivity
-version: "20.4.3"
+version: "29.6.1"
 port: 1123
 description: >-
   draw.io (also known as diagrams.net) is a free, open-source diagramming
