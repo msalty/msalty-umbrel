@@ -2,7 +2,7 @@ manifestVersion: 1
 id: msalty-drawio
 name: draw.io
 tagline: Online diagramming application
-icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/2048px-Diagrams.net_Logo.svg.png
+icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/250px-Diagrams.net_Logo.svg.png
 category: Productivity
 version: "29.6.1"
 port: 1123
