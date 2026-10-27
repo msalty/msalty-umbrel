@@ -1,0 +1,49 @@
+manifestVersion: 1
+id: msalty-rioserver
+name: RioServer NG
+tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
+icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
+category: media
+version: "0.1.0"
+port: 12078
+description: >-
+  A modern replacement for the server software of the Rio Receiver and the
+  Dell Digital Audio Receiver. These 2001-era network MP3 players have no music
+  and almost no software of their own: every time they power on they download
+  their operating system from a server on the network and then stream music
+  from it.
+
+
+  Features:
+    - iPod-style menus on the receiver: Music › Artists › Albums › Songs, with albums in release order and tracks in album order, plus Genres, Playlists, Recently Added, Shuffle and Now Playing.
+    - A web interface for browsing your library with album art and search. Play music in the browser or send it to any receiver and control playback from there.
+    - Automatic library updates: music you add, change or remove shows up within seconds.
+    - Network boot: the receivers boot straight from your Umbrel. You don't need a Windows PC or a separate NFS server.
+    - Works with the original SonicBlue/Dell firmware too.
+
+
+  Put your MP3s in Files › Downloads › music (the same folder Navidrome uses),
+  then power-cycle your receivers. They must be on the same network and subnet
+  as your Umbrel.
+
+
+  RioServer NG uses host networking because the receivers find the server with
+  UDP broadcasts and boot over NFS. It needs these ports to be free on your
+  Umbrel: 12078/tcp, 21075/udp, 111, 627 and 2049 (tcp and udp). If your Umbrel
+  already runs an NFS server or rpcbind, the receivers might not be able to
+  network-boot.
+developer: msalty
+website: https://github.com/msalty/dell-rio-server
+submitter: msalty
+submission: https://github.com/msalty/msalty-umbrel/tree/main/msalty-rioserver
+repo: https://github.com/msalty/dell-rio-server
+support: https://github.com/msalty/dell-rio-server/issues
+gallery:
+  - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
+  - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
+releaseNotes: >-
+  Initial release for the msalty Umbrel Community App Store.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

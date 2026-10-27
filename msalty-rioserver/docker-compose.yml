@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  server:
+    image: ghcr.io/msalty/dell-rio-server:0.1.0
+    # Receivers find the server with UDP broadcasts and network-boot over NFS,
+    # neither of which survives Docker's port mapping, so the container sits
+    # directly on the LAN (like Umbrel's Home Assistant and Plex apps). That is
+    # also why there is no app_proxy: the web UI is reached on port 12078.
+    network_mode: host
+    restart: on-failure
+    volumes:
+      # Same music folder as Umbrel's Navidrome app. Read-only: RioServer
+      # never changes your files.
+      - ${UMBREL_ROOT}/data/storage/downloads/music:/music:ro
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      # Serve the web UI on the Rio protocol port only. The default extra port,
+      # 8080, is published by Umbrel's Lightning Node app.
+      RIO_WEB_PORT: "0"
