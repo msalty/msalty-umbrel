@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: ghcr.io/msalty/dell-rio-server:0.1.0
+    image: ghcr.io/msalty/dell-rio-server:0.1.1
     # Receivers find the server with UDP broadcasts and network-boot over NFS,
     # neither of which survives Docker's port mapping, so the container sits
     # directly on the LAN (like Umbrel's Home Assistant and Plex apps). That is

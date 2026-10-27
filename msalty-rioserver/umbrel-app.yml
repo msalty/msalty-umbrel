@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.1.0"
+version: "0.1.1"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -42,7 +42,9 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Initial release for the msalty Umbrel Community App Store.
+  Fixes audio dropouts on receivers running the RioServer NG firmware, caused
+  by the player starving the CPU. Power-cycle your receivers after updating so
+  they boot the new firmware.
 dependencies: []
 path: ""
 defaultUsername: ""
