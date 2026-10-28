@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.1.3"
+version: "0.1.4"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -43,18 +43,21 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Fixes the volume slider overflowing the receiver cards in the web interface.
+  Fixes a short skip every 5 to 10 minutes during playback, most noticeable
+  with 320 kbps MP3s. The web interface can now be installed as an app on your
+  phone; mobile browsers only offer this when the page is served over HTTPS.
+  Power-cycle your receivers after updating so they boot the new firmware.
 
 
-  Since 0.1.1: receivers now boot with a RioServer NG logo instead of "DELL" (the receiver's
+  Since 0.1.1: the volume slider no longer overflows the receiver cards.
+  Receivers now boot with a RioServer NG logo instead of "DELL" (the receiver's
   flash still shows the old logo for a moment at power-on). Volume and other
   controls from the web interface take effect instantly instead of after up to
   3 seconds, and the volume slider no longer jumps around; it is now also shown
   on phones. Artist tiles show the artist's picture or newest album cover
   (put an artist.jpg in an artist's folder to choose one). New: name your
   receivers, a sleep timer per receiver, lock-screen controls when playing in
-  the browser, and keyboard shortcuts. Power-cycle your receivers after
-  updating so they boot the new firmware.
+  the browser, and keyboard shortcuts.
 dependencies: []
 path: ""
 defaultUsername: ""
