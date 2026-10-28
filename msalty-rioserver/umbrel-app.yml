@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.1.1"
+version: "0.1.2"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -16,7 +16,8 @@ description: >-
 
   Features:
     - iPod-style menus on the receiver: Music › Artists › Albums › Songs, with albums in release order and tracks in album order, plus Genres, Playlists, Recently Added, Shuffle and Now Playing.
-    - A web interface for browsing your library with album art and search. Play music in the browser or send it to any receiver and control playback from there.
+    - A web interface for browsing your library with album and artist art and search. Play music in the browser or send it to any receiver and control it from there, with instant volume and transport control.
+    - Name your receivers ("Kitchen") and set a sleep timer that fades out and pauses.
     - Automatic library updates: music you add, change or remove shows up within seconds.
     - Network boot: the receivers boot straight from your Umbrel. You don't need a Windows PC or a separate NFS server.
     - Works with the original SonicBlue/Dell firmware too.
@@ -42,9 +43,15 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Fixes audio dropouts on receivers running the RioServer NG firmware, caused
-  by the player starving the CPU. Power-cycle your receivers after updating so
-  they boot the new firmware.
+  Receivers now boot with a RioServer NG logo instead of "DELL" (the receiver's
+  flash still shows the old logo for a moment at power-on). Volume and other
+  controls from the web interface take effect instantly instead of after up to
+  3 seconds, and the volume slider no longer jumps around; it is now also shown
+  on phones. Artist tiles show the artist's picture or newest album cover
+  (put an artist.jpg in an artist's folder to choose one). New: name your
+  receivers, a sleep timer per receiver, lock-screen controls when playing in
+  the browser, and keyboard shortcuts. Power-cycle your receivers after
+  updating so they boot the new firmware.
 dependencies: []
 path: ""
 defaultUsername: ""
