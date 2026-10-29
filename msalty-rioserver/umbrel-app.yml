@@ -59,7 +59,8 @@ releaseNotes: >-
   on phones. Artist tiles show the artist's picture or newest album cover
   (put an artist.jpg in an artist's folder to choose one). New: name your
   receivers, a sleep timer per receiver, lock-screen controls when playing in
-  the browser, and keyboard shortcuts.
+  the browser, and keyboard shortcuts. If you're updating from 0.1.3 or
+  earlier, power-cycle your receivers so they boot the new firmware.
 dependencies: []
 path: ""
 defaultUsername: ""
