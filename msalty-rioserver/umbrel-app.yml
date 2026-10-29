@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.1.4"
+version: "0.1.4-alpha"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -43,13 +43,15 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Fixes a short skip every 5 to 10 minutes during playback, most noticeable
-  with 320 kbps MP3s. The web interface can now be installed as an app on your
-  phone; mobile browsers only offer this when the page is served over HTTPS.
-  Power-cycle your receivers after updating so they boot the new firmware.
+  Alpha: Chromecast support. Chromecasts, Google Home and Nest speakers,
+  speaker groups and TVs with Chromecast built-in now show up next to your
+  receivers, and you can send music to them from the web interface. A receiver
+  that is booting no longer leaves a stray extra card in the web interface.
 
 
-  Since 0.1.1: the volume slider no longer overflows the receiver cards.
+  Since 0.1.1: fixes a short skip every 5 to 10 minutes during playback, most
+  noticeable with 320 kbps MP3s. The web interface can be installed as an app
+  on your phone when it is served over HTTPS. The volume slider no longer overflows the receiver cards.
   Receivers now boot with a RioServer NG logo instead of "DELL" (the receiver's
   flash still shows the old logo for a moment at power-on). Volume and other
   controls from the web interface take effect instantly instead of after up to
