@@ -19,6 +19,7 @@ description: >-
     - A web interface for browsing your library with album and artist art, search, an A-Z bar and album sorting. Play music in the browser or send it to any receiver or speaker and control it from there, with a full-screen Now Playing, a Light / Dark / System theme and colours from the album art.
     - Up Next: see and reorder what's coming up on any player, use "Play next" or "Add to Up Next", and move playback from one room to another.
     - Chromecast: Chromecasts, Google Home and Nest speakers, speaker groups and TVs with Chromecast built-in show up next to your receivers, and play without gaps between tracks.
+    - Phones and tablets as receivers: turn an old phone or tablet plugged into a stereo into a receiver from its browser.
     - Playlists you make in the web interface, which show up on the receivers too, plus play history.
     - Podcasts: subscribe by feed URL or OPML. Episodes download to your Umbrel and resume where you left off on any device.
     - Name your receivers ("Kitchen"), set a sleep timer that fades out, or an alarm that starts music and fades it in.
