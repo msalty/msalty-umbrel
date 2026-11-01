@@ -2,7 +2,9 @@ version: "3.7"
 
 services:
   server:
-    image: ghcr.io/msalty/dell-rio-server:0.1.4-alpha
+    # v0.1.5.1 isn't a semver tag, so the publish workflow only tagged this
+    # build by its commit.
+    image: ghcr.io/msalty/dell-rio-server:sha-c6dfbab
     # Receivers find the server with UDP broadcasts and network-boot over NFS,
     # neither of which survives Docker's port mapping, so the container sits
     # directly on the LAN (like Umbrel's Home Assistant and Plex apps). That is
