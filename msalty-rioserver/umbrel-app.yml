@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.1.6"
+version: "0.1.7"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -43,13 +43,14 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Receivers now detect audio dropouts themselves and report their audio buffer
-  and CPU load, so the app's logs show when a skip happened, on which track,
-  and what the receiver was doing at the time. Power-cycle your receivers after
-  updating so they boot the new firmware.
+  Receivers now decode MP3s with Rockbox's faster decoder, which leaves the
+  receiver's CPU headroom on 320 kbps tracks that used to drop out. Scrolling
+  titles now redraw only their own line instead of the whole screen.
+  Power-cycle your receivers after updating so they boot the new firmware.
 
 
-  Since 0.1.4: fixes one cause of audio skips: music files are read without
+  Since 0.1.4: receivers detect audio dropouts and report their audio buffer
+  and CPU load in the app's logs. Fixes one cause of audio skips: music files are read without
   holding up every other stream, which helps when your music is on a slow or
   sleeping disk. If a receiver's stream runs dry, the server logs the track and
   its bitrate. On phones and narrow windows, "Play on" is an icon next to the
