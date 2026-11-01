@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.1.8"
+version: "0.1.9"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -48,7 +48,19 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  A big feature release:
+  Phones and tablets can now be receivers. Open the web interface on an old
+  phone or tablet plugged into a stereo, go to Receivers and choose "Use this
+  device as a receiver". It then shows up on every other device with Up Next,
+  moving playback, the sleep timer, alarms and podcast resume, and plays songs
+  without gaps. Keep its page open and on screen: browsers pause pages that
+  aren't showing, and over plain HTTP (the way Umbrel serves the app) the page
+  can't keep the screen on by itself, so set the device's screen timeout to
+  never. Also: long titles in Now Playing scroll like a ticker and can be
+  swiped, jump bars read # A to Z, and albums sort the way they're filed. No
+  receiver firmware changes in this update.
+
+
+  Since 0.1.7, a big feature release:
     - Up Next: see and reorder what's coming up on any receiver or speaker, and use "Play next" or "Add to Up Next" without losing the current queue.
     - Move playback, queue and position from one room's player to another.
     - Make, rename, reorder and delete playlists in the web interface. They show up on the receivers too.
@@ -58,7 +70,8 @@ releaseNotes: >-
     - Chromecasts go from one track to the next without a gap.
     - Web interface: full-screen Now Playing, song menus (right-click or long-press), a Light / Dark / System theme, colours from the album art, current covers on receiver cards, an A-Z bar for Songs, and album sorting.
 
-  Power-cycle your receivers after updating so they boot the new firmware.
+  If you're updating from 0.1.7 or earlier, power-cycle your receivers so they
+  boot the new firmware.
 
 
   Since 0.1.6: receivers decode MP3s with Rockbox's faster decoder to free up
