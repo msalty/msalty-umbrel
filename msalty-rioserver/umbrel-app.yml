@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.1.5.1"
+version: "0.1.6"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -43,16 +43,17 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Fixes one cause of audio skips: music files are now read without holding up
-  every other stream, which helps when your music is on a slow or sleeping
-  disk. If a receiver's stream still runs dry, the receiver now reports it and
-  the server logs the track and its bitrate, so skips leave a clue in the app's
-  logs. On phones and narrow windows, "Play on" is now an icon next to the
-  search box. Power-cycle your receivers after updating so they boot the new
-  firmware.
+  Receivers now detect audio dropouts themselves and report their audio buffer
+  and CPU load, so the app's logs show when a skip happened, on which track,
+  and what the receiver was doing at the time. Power-cycle your receivers after
+  updating so they boot the new firmware.
 
 
-  Since 0.1.4: Chromecasts, Google Home and Nest speakers, speaker groups and
+  Since 0.1.4: fixes one cause of audio skips: music files are read without
+  holding up every other stream, which helps when your music is on a slow or
+  sleeping disk. If a receiver's stream runs dry, the server logs the track and
+  its bitrate. On phones and narrow windows, "Play on" is an icon next to the
+  search box. Chromecasts, Google Home and Nest speakers, speaker groups and
   TVs with Chromecast built-in show up next to your receivers, and you can send
   music to them from the web interface. A receiver that is booting no longer
   leaves a stray extra card in the web interface.
