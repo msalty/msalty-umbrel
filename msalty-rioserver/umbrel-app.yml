@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.1.7"
+version: "0.1.8"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -43,10 +43,21 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Receivers now decode MP3s with Rockbox's faster decoder, which leaves the
-  receiver's CPU headroom on 320 kbps tracks that used to drop out. Scrolling
-  titles now redraw only their own line instead of the whole screen.
+  A big feature release:
+    - Up Next: see and reorder what's coming up on any receiver or speaker, and use "Play next" or "Add to Up Next" without losing the current queue.
+    - Move playback, queue and position from one room's player to another.
+    - Make, rename, reorder and delete playlists in the web interface. They show up on the receivers too.
+    - Play history: Recently Played and Top 25 Most Played, on the receiver and on the web.
+    - Podcasts: subscribe by feed URL or OPML. Episodes download to the app's storage and resume where you left off on any device.
+    - Alarm clock: start music on a receiver at a set time and fade it in.
+    - Chromecasts go from one track to the next without a gap.
+    - Web interface: full-screen Now Playing, song menus (right-click or long-press), a Light / Dark / System theme, colours from the album art, current covers on receiver cards, an A-Z bar for Songs, and album sorting.
+
   Power-cycle your receivers after updating so they boot the new firmware.
+
+
+  Since 0.1.6: receivers decode MP3s with Rockbox's faster decoder to free up
+  CPU on 320 kbps tracks, and scrolling titles redraw only their own line.
 
 
   Since 0.1.4: receivers detect audio dropouts and report their audio buffer
