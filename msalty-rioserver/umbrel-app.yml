@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.1.9"
+version: "0.2.0"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -49,16 +49,24 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Phones and tablets can now be receivers. Open the web interface on an old
-  phone or tablet plugged into a stereo, go to Receivers and choose "Use this
-  device as a receiver". It then shows up on every other device with Up Next,
-  moving playback, the sleep timer, alarms and podcast resume, and plays songs
-  without gaps. Keep its page open and on screen: browsers pause pages that
-  aren't showing, and over plain HTTP (the way Umbrel serves the app) the page
-  can't keep the screen on by itself, so set the device's screen timeout to
-  never. Also: long titles in Now Playing scroll like a ticker and can be
-  swiped, jump bars read # A to Z, and albums sort the way they're filed. No
-  receiver firmware changes in this update.
+  Web interface improvements, mostly for phones:
+    - The player shows which receiver or speaker it's controlling.
+    - A phone or tablet used as a receiver remembers its name, so it's set up only once. On an iPhone or iPad, add the web interface to the Home Screen so Safari doesn't forget it.
+    - No more accidental zooming, and going back returns you to where you were in the artist and album lists.
+    - The player stays on top and usable while the menu is open.
+
+  No receiver firmware changes in this update.
+
+
+  Since 0.1.8: phones and tablets can be receivers. Open the web interface on
+  an old phone or tablet plugged into a stereo, go to Receivers and choose "Use
+  this device as a receiver". It then shows up on every other device with Up
+  Next, moving playback, the sleep timer, alarms and podcast resume, and plays
+  songs without gaps. Keep its page open and on screen: browsers pause pages
+  that aren't showing, and over plain HTTP (the way Umbrel serves the app) the
+  page can't keep the screen on by itself, so set the device's screen timeout
+  to never. Long titles in Now Playing scroll like a ticker and can be swiped,
+  jump bars read # A to Z, and albums sort the way they're filed.
 
 
   Since 0.1.7, a big feature release:
