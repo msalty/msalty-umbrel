@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.2.0"
+version: "0.2.1"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -49,13 +49,17 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Web interface improvements, mostly for phones:
+  Receiver firmware 1.7: music started from the web interface now wakes a
+  receiver from standby. Text on Now Playing and other album-art tinted views
+  stays readable whatever the cover's colours. Power-cycle your receivers after
+  updating so they boot the new firmware.
+
+
+  Since 0.1.9, web interface improvements, mostly for phones:
     - The player shows which receiver or speaker it's controlling.
     - A phone or tablet used as a receiver remembers its name, so it's set up only once. On an iPhone or iPad, add the web interface to the Home Screen so Safari doesn't forget it.
     - No more accidental zooming, and going back returns you to where you were in the artist and album lists.
     - The player stays on top and usable while the menu is open.
-
-  No receiver firmware changes in this update.
 
 
   Since 0.1.8: phones and tablets can be receivers. Open the web interface on
@@ -78,9 +82,6 @@ releaseNotes: >-
     - Alarm clock: start music on a receiver at a set time and fade it in.
     - Chromecasts go from one track to the next without a gap.
     - Web interface: full-screen Now Playing, song menus (right-click or long-press), a Light / Dark / System theme, colours from the album art, current covers on receiver cards, an A-Z bar for Songs, and album sorting.
-
-  If you're updating from 0.1.7 or earlier, power-cycle your receivers so they
-  boot the new firmware.
 
 
   Since 0.1.6: receivers decode MP3s with Rockbox's faster decoder to free up
