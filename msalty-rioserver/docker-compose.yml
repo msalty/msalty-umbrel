@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: ghcr.io/msalty/dell-rio-server:0.2.1
+    image: ghcr.io/msalty/dell-rio-server:0.2.2
     # Receivers find the server with UDP broadcasts and network-boot over NFS,
     # neither of which survives Docker's port mapping, so the container sits
     # directly on the LAN (like Umbrel's Home Assistant and Plex apps). That is
@@ -18,3 +18,10 @@ services:
       # Serve the web UI on the Rio protocol port only. The default extra port,
       # 8080, is published by Umbrel's Lightning Node app.
       RIO_WEB_PORT: "0"
+      # AirPlay and Spotify Connect speakers, switched on per receiver in the
+      # web interface. The defaults (5100 and 5300) run into ports other
+      # Umbrel apps use, such as DeepSea's 5300, so these use ranges no Umbrel
+      # app claims: AirPlay 6200-6327 (16 per receiver, tcp and udp) and
+      # Spotify Connect 6400-6415 (1 per receiver, tcp).
+      RIO_AIRPLAY_PORT_BASE: "6200"
+      RIO_SPOTIFY_PORT_BASE: "6400"

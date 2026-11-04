@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.2.1"
+version: "0.2.2"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -20,6 +20,7 @@ description: >-
     - Up Next: see and reorder what's coming up on any player, use "Play next" or "Add to Up Next", and move playback from one room to another.
     - Chromecast: Chromecasts, Google Home and Nest speakers, speaker groups and TVs with Chromecast built-in show up next to your receivers, and play without gaps between tracks.
     - Phones and tablets as receivers: turn an old phone or tablet plugged into a stereo into a receiver from its browser.
+    - AirPlay and Spotify Connect: each receiver can show up as a speaker in an iPhone's AirPlay menu and in Spotify's device picker. Switch it on per receiver.
     - Playlists you make in the web interface, which show up on the receivers too, plus play history.
     - Podcasts: subscribe by feed URL or OPML. Episodes download to your Umbrel and resume where you left off on any device.
     - Name your receivers ("Kitchen"), set a sleep timer that fades out, or an alarm that starts music and fades it in.
@@ -34,11 +35,12 @@ description: >-
 
 
   RioServer NG uses host networking because the receivers find the server with
-  UDP broadcasts and boot over NFS, and Chromecasts are found over mDNS. It
-  needs these ports to be free on your Umbrel: 12078/tcp, 21075/udp, 111, 627
-  and 2049 (tcp and udp). If your Umbrel
-  already runs an NFS server or rpcbind, the receivers might not be able to
-  network-boot.
+  UDP broadcasts and boot over NFS, and Chromecasts, AirPlay and Spotify
+  Connect use mDNS. It needs these ports to be free on your Umbrel: 12078/tcp,
+  21075/udp, 111, 627 and 2049 (tcp and udp). For receivers you switch AirPlay
+  or Spotify Connect on for, it also uses 6200-6327 (AirPlay, tcp and udp) and
+  6400-6415/tcp (Spotify Connect). If your Umbrel already runs an NFS server or
+  rpcbind, the receivers might not be able to network-boot.
 developer: msalty
 website: https://github.com/msalty/dell-rio-server
 submitter: msalty
@@ -49,10 +51,22 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  Receiver firmware 1.7: music started from the web interface now wakes a
+  Receivers as AirPlay and Spotify Connect speakers. Each receiver can show up
+  in an iPhone's AirPlay menu and in Spotify's device picker, named after the
+  receiver. Both are off until you switch them on with the AirPlay and Spotify
+  Connect switches on the receiver's card under Receivers.
+    - Spotify Connect needs Spotify Premium. AirPlay is classic AirPlay (AirPlay 1), so Home app multi-room and Siri aren't offered.
+    - Expect a delay of a few seconds between the phone and the sound.
+    - The newest phone to connect wins. Starting music from the receiver or the web interface, or pressing Stop, ends the phone's session.
+    - The phone's volume controls the receiver. The receiver's own queue is saved, and its card offers "Resume Up Next" afterwards.
+    - Only receivers running the RioServer NG firmware 1.8 (in this update) take part.
+
+  Power-cycle your receivers after updating so they boot firmware 1.8.
+
+
+  Since 0.2.0: firmware 1.7, so music started from the web interface wakes a
   receiver from standby. Text on Now Playing and other album-art tinted views
-  stays readable whatever the cover's colours. Power-cycle your receivers after
-  updating so they boot the new firmware.
+  stays readable whatever the cover's colours.
 
 
   Since 0.1.9, web interface improvements, mostly for phones:
