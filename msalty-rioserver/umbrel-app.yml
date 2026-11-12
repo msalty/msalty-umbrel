@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.2.4"
+version: "0.2.5"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -52,15 +52,19 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  RioAmp: Settings › Player › RioAmp turns the web interface into a classic
+  A much smaller download: the app is back to about 70 MB, down from about
+  230 MB in 0.2.4. The equaliser now uses a small ffmpeg built with only what
+  it needs, and sounds the same. No receiver firmware changes, so no
+  power-cycle is needed.
+
+
+  Since 0.2.3, RioAmp: Settings › Player › RioAmp turns the web interface into a classic
   late-1990s desktop player, and it loads the classic .wsz skins. Its
   ten-band equaliser and balance work on every player: this browser shapes
   its own sound, and for receivers, Chromecasts, browser receivers, iPhones
   and iPads your Umbrel filters the track as it plays, with a moment's
   silence when you let go of a slider. They don't apply to AirPlay and
-  Spotify sessions. No receiver firmware changes, so no power-cycle is needed.
-  The app's download grows from about 70 MB to about 230 MB, since it now
-  includes ffmpeg for the equaliser.
+  Spotify sessions.
 
 
   Since 0.2.2, AirPlay and Spotify Connect on more players:
