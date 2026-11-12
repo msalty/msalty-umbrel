@@ -4,7 +4,7 @@ name: RioServer NG
 tagline: Music and network-boot server for Rio and Dell Digital Audio Receivers
 icon: https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/icon.svg
 category: media
-version: "0.2.3"
+version: "0.2.4"
 port: 12078
 description: >-
   A modern replacement for the server software of the Rio Receiver and the
@@ -24,6 +24,7 @@ description: >-
     - Playlists you make in the web interface, which show up on the receivers too, plus play history.
     - Podcasts: subscribe by feed URL or OPML. Episodes download to your Umbrel and resume where you left off on any device.
     - Name your receivers ("Kitchen"), set a sleep timer that fades out, or an alarm that starts music and fades it in.
+    - RioAmp: turn the web interface into a classic late-1990s skinned desktop player, classic .wsz skins included, with a ten-band equaliser and balance that work on every player.
     - Automatic library updates: music you add, change or remove shows up within seconds.
     - Network boot: the receivers boot straight from your Umbrel. You don't need a Windows PC or a separate NFS server.
     - Works with the original SonicBlue/Dell firmware too.
@@ -51,13 +52,25 @@ gallery:
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/1.png
   - https://raw.githubusercontent.com/msalty/msalty-umbrel/main/msalty-rioserver/2.png
 releaseNotes: >-
-  AirPlay and Spotify Connect on more players:
+  RioAmp: Settings › Player › RioAmp turns the web interface into a classic
+  late-1990s desktop player, and it loads the classic .wsz skins. Its
+  ten-band equaliser and balance work on every player: this browser shapes
+  its own sound, and for receivers, Chromecasts, browser receivers, iPhones
+  and iPads your Umbrel filters the track as it plays, with a moment's
+  silence when you let go of a slider. They don't apply to AirPlay and
+  Spotify sessions. No receiver firmware changes, so no power-cycle is needed.
+  The app's download grows from about 70 MB to about 230 MB, since it now
+  includes ffmpeg for the equaliser.
+
+
+  Since 0.2.2, AirPlay and Spotify Connect on more players:
     - Phones and tablets used as receivers get the same AirPlay and Spotify Connect switches as a Rio. Their speaker is there only while the receiver page is open, and is withdrawn a minute after it closes.
     - Chromecasts and Google speakers can be AirPlay speakers (their card has an AirPlay switch). Speaker groups play AirPlay in sync. Expect a few seconds more delay than on a receiver, and a screen such as a Nest Hub or TV keeps showing the song the session started with. They have Spotify Connect built in, so they get no Spotify switch.
     - The player bar and Now Playing show what an AirPlay or Spotify session is playing, with its cover, instead of "Nothing playing".
     - Fixes AirPlay and Spotify sessions on receivers running out of data and stuttering after several minutes. Receivers now keep more of the stream in hand.
 
-  Power-cycle your receivers after updating so they boot the new firmware.
+  If you're updating from 0.2.2 or earlier, power-cycle your receivers so they
+  boot the new firmware.
 
 
   Since 0.2.1: receivers as AirPlay and Spotify Connect speakers. Each receiver can show up
